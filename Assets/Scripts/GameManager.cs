@@ -44,8 +44,9 @@ public class GameManager : MonoBehaviour
     
     public void Die()
     {
-            UIManager.Instance.SetStatus(Constants.StatusDeadTapToStart);
-            this.GameState = GameState.Dead; 
+        UIManager.Instance.SetStatus(Constants.StatusDeadTapToStart);
+        this.GameState = GameState.Dead;
+        UIManager.Instance.gameOverPanel.SetActive(true);
     }
 
 }

@@ -67,11 +67,6 @@ public class CharacterRotateMovement : MonoBehaviour
                 break;
             case GameState.Dead:
                 anim.SetBool(Constants.AnimationStarted, false);
-                if (Input.GetMouseButtonUp(0))
-                {
-                    //restart
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
                 break;
             default:
                 break;

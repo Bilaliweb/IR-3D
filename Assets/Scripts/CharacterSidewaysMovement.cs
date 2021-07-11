@@ -59,7 +59,7 @@ public class CharacterSidewaysMovement : MonoBehaviour
                 }
                 break;
             case GameState.Playing:
-                UIManager.Instance.IncreaseScore(0.001f);
+                UIManager.Instance.IncreaseScore(0.001f); // Handle Score Here.
 
                 CheckHeight();
 
@@ -83,11 +83,11 @@ public class CharacterSidewaysMovement : MonoBehaviour
                 break;
             case GameState.Dead:
                 anim.SetBool(Constants.AnimationStarted, false);
-                if (Input.GetMouseButtonUp(0))
-                {
-                    //restart
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
+                //if (Input.GetMouseButtonUp(0))
+                //{
+                //    //restart
+                //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //}
                 break;
             default:
                 break;

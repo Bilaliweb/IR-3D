@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class UIManager : MonoBehaviour
             return instance;
         }
     }
+
+    public GameObject gameOverPanel;
 
     protected UIManager()
     {
@@ -67,6 +70,9 @@ public class UIManager : MonoBehaviour
 
     public Text ScoreText, StatusText;
 
-
+    public void ChangeScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 
 }
